@@ -25,7 +25,9 @@ module.exports = (
         resource_type: "video",
         public_id: `videos/${job.uid}`,
         overwrite: true,
-        notification_url: ""
+        notification_url: "",
+        eager: [{ auto: "low" }],
+        eager_async: true
       },
       function(error, result) {
         console.log(result, error);
