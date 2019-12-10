@@ -28,10 +28,9 @@ module.exports = (
         notification_url: ""
       },
       function(error, result) {
-        console.log(result, error);
+        job.mediaUrl = result.url;
+        resolve(job);
       }
     );
-
-    resolve(job);
   });
 };
