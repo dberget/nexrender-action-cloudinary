@@ -28,7 +28,8 @@ module.exports = (
         notification_url: ""
       },
       function(error, result) {
-        job.mediaUrl = result.url;
+        console.log(result, error);
+
         resolve(job);
       }
     );
