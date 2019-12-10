@@ -1,1 +1,1 @@
-# nexrender-action-normalize-color
+# nexrender-action-cloudinary
