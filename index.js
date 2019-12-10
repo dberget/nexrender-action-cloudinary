@@ -26,7 +26,7 @@ module.exports = (
         public_id: `videos/${job.uid}`,
         overwrite: true,
         notification_url: "",
-        eager: [{ quality: "auto:low" }]
+        eager: [{ quality: "50" }]
       },
       function(error, result) {
         console.log(result, error);
