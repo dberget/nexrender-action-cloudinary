@@ -23,7 +23,7 @@ module.exports = (
       input,
       {
         resource_type: "video",
-        public_id: "videos",
+        public_id: `videos/${job.uid}`,
         overwrite: true,
         notification_url: ""
       },
