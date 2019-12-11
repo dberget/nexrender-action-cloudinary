@@ -29,7 +29,7 @@ module.exports = (
         eager: [{ quality: 50 }]
       },
       function(error, result) {
-        if (typeof error !== undefined) {
+        if (typeof error !== "undefined") {
           console.log(`Error in ${name} from Cloudinary: `, error);
         }
 
