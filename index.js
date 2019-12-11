@@ -26,10 +26,12 @@ module.exports = (
         public_id: `videos/${job.uid}`,
         overwrite: true,
         notification_url: "",
-        eager: [{ streaming_profile: "hd", format: "m3u8" }]
+        eager: [{ quality: 50 }]
       },
       function(error, result) {
-        console.log(result, error);
+        if (typeof error !== undefined) {
+          console.log(`Error in ${name} from Cloudinary: `, error);
+        }
 
         resolve(job);
       }
