@@ -18,13 +18,15 @@ module.exports = (
 
   if (!path.isAbsolute(input)) input = path.join(job.workpath, input)
 
+  const UploadApiOptions = { resource_type: 'video', ...uploadOptions }
+
   return new Promise((resolve, reject) => {
     cloudinary.uploader.upload(input, UploadApiOptions, function (
       error,
       result
     ) {
       if (typeof error !== 'undefined') {
-        console.log(`Error in ${name} from Cloudinary: `, error)
+        settings.logger.log(`Cloudinary Error: `, error)
       }
 
       resolve(job)
