@@ -22,7 +22,7 @@ Example Postrender action
           "api_key": "Cloudinary api key",
           "cloud_name": "Cloudinary Bucket",
           "api_secret": "Cloudinary api secret",
-          "UploadApiOptions": {} // Directly passed to cloudinary.
+          "UploadApiOptions": {} // Directly passed to cloudinary uploader.
         }
       }
     ]
