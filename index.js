@@ -20,6 +20,9 @@ module.exports = (
 
   const cloudinaryOptions = { resource_type: 'video', ...UploadApiOptions }
 
+  console.log(cloudinaryOptions)
+  console.log(input)
+
   return new Promise((resolve, reject) => {
     cloudinary.uploader.upload(input, cloudinaryOptions, function (
       error,
