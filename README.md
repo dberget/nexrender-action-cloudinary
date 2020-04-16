@@ -22,10 +22,16 @@ Example Postrender action
           "api_key": "Cloudinary api key",
           "cloud_name": "Cloudinary Bucket",
           "api_secret": "Cloudinary api secret",
-          "UploadApiOptions": {} // Directly passed to cloudinary uploader.
+          "UploadApiOptions": {} // See Upload Api Options section.
         }
       }
     ]
 ```
 
-[See Cloudinary docs for UploadApiOptions](https://cloudinary.com/documentation/image_upload_api_reference#optional_parameters)
+## Upload Api Options
+
+Directly passed to cloudinary uploader. The only default provided is `{resource_type: 'video'}`.
+
+Read the official docs for a list of supported options.
+
+[Cloudinary Docs for UploadApiOptions](https://cloudinary.com/documentation/image_upload_api_reference#optional_parameters)
