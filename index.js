@@ -18,10 +18,10 @@ module.exports = (
 
   if (!path.isAbsolute(input)) input = path.join(job.workpath, input)
 
-  const UploadApiOptions = { resource_type: 'video', ...uploadOptions }
+  const cloudinaryOptions = { resource_type: 'video', ...UploadApiOptions }
 
   return new Promise((resolve, reject) => {
-    cloudinary.uploader.upload(input, UploadApiOptions, function (
+    cloudinary.uploader.upload(input, cloudinaryOptions, function (
       error,
       result
     ) {
