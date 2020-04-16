@@ -2,13 +2,10 @@ var cloudinary = require('cloudinary').v2
 const { name } = require('./package.json')
 const path = require('path')
 
-module.exports = (
-  job,
-  settings,
-  { input, api_key, cloud_name, api_secret, UploadApiOptions },
-  type
-) => {
-  console.log(api_key)
+module.exports = (job, settings, params, type) => {
+  let { input, api_key, cloud_name, api_secret, UploadApiOptions } = params
+
+  console.log(params)
 
   cloudinary.config({
     cloud_name: cloud_name,
