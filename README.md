@@ -1,7 +1,5 @@
 # nexrender-action-cloudinary
 
-Get sarto
-
 # Installation
 
 ```

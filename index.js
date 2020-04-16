@@ -5,9 +5,10 @@ const path = require('path')
 module.exports = (
   job,
   settings,
-  { input, api_key, cloud_name, api_secret, UploadApiOptions },
+  { input, api_key, cloud_name, api_secret, UploadApiOptions } = params,
   type
 ) => {
+  console.log(params)
   cloudinary.config({
     cloud_name: cloud_name,
     api_key: api_key,
