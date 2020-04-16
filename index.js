@@ -17,16 +17,11 @@ module.exports = (
     api_secret: api_secret,
   })
 
-  console.log('input: ', input)
-  console.log('job: ', job.output)
-
   input = input || job.output
 
   if (!path.isAbsolute(input)) input = path.join(job.workpath, input)
 
   const cloudinaryOptions = { resource_type: 'video', ...UploadApiOptions }
-
-  console.log(input)
 
   return new Promise((resolve, reject) => {
     cloudinary.uploader.upload(input, cloudinaryOptions, function (
